@@ -1,0 +1,274 @@
+html,body{
+  font-family: 'Open Sans', sans-serif;
+}
+.active{
+  color: #e41661!important;
+}
+/* 导航 */
+.headerNav{
+  z-index: 999;
+  border-radius: inherit;
+  background-color: #000;
+  a{
+    color: #fff
+  }
+  /* 切换按钮 */
+  .navbar-toggle{
+    border-color: #fff;
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+  .navbar-toggle:focus{
+    border-color: #fff;
+    .icon-bar {
+      background-color: #fff;
+    }
+  }
+  /* logo */
+  .navbar-brand:hover{
+    color: #e41661;
+  }
+  .navbar-brand:focus{
+    color: #e41661;
+  }
+  /* 右侧导航键 */
+  .nav .open > a{
+    background-color: inherit;
+  }
+  .nav > li > a:hover{
+    background-color: inherit;
+    color: #e41661;
+  }
+  .nav li a:focus,.nav .open li a:hover{
+    background-color: inherit;
+    color: #fff;
+  }
+  .dropdown-menu{
+    background-color:inherit;
+  }
+  .dropdown-menu > li > a{
+    color: #fff;
+  }
+  .dropdown-menu > li > a:hover{
+    color: #fff;
+  }
+}
+/* banner */
+.bannerCon{
+  overflow: hidden;
+  /* 公司介绍 */
+  .company{
+    width: 80%;
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    h1{
+      text-align: center;
+      font-family: 'Open Sans';
+      color: #fff;
+    }
+    h3{
+      text-indent: 2em;
+      font-family: 'Open Sans';
+      color: #fff;
+    }
+    @media screen and (max-width: 1024px) {
+      h3{
+        text-align: left;
+      }
+    }
+    button{
+      margin: 0 auto;
+      margin-top: 5rem;
+      width: 172px;
+      height: 50px;
+      background-color: inherit;
+      border: 0;
+      border: 1px solid #fff;
+      font-size: 1.6rem;
+      color: #fff;
+      outline: none;
+    }
+    button:focus{
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #000;
+      outline: none;
+    }
+  }
+  /* 背景轮播 */
+  .banner{
+    ul{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: 0;
+      overflow: hidden;
+    }
+    ul li{
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      color: transparent;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: none;
+      opacity: 0;
+      z-index: 0;
+      animation: imgAnimation 72s linear infinite 0s;
+    }
+    ul li:nth-child(1){
+      background-image: url('../images/bg_01.jpg');
+    }
+    ul li:nth-child(2){
+      background-image: url('../images/bg_02.jpg');
+      animation-delay: 12s;
+    }
+    ul li:nth-child(3){
+      background-image: url('../images/bg_03.jpg');
+      animation-delay: 24s;
+    }
+    ul li:nth-child(4){
+      background-image: url('../images/bg_04.jpg');
+      animation-delay: 36s;
+    }
+    ul li:nth-child(5){
+      background-image: url('../images/bg_05.jpg');
+      animation-delay: 48s;
+    }
+    ul li:nth-child(6){
+      background-image: url('../images/bg_06.jpg');
+      animation-delay: 60s;
+    }
+    @keyframes imgAnimation {
+      0% {
+        opacity: 0;
+        animation-timing-function: ease-in;
+      }
+      8%{
+        opacity: 1;
+        animation-timing-function: ease-out;
+        transform: scale(1.15);
+      }
+      17%{
+        opacity: 1;
+        transform: scale(1.20);
+      }
+      25%{
+        opacity: 0;
+        transform: scale(1.40);
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+    #particles-js{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 500;
+      width: 100%;
+      height: 99%;
+    }
+  }
+}
+/* 公司新闻 */
+.company_news{
+  padding: 4rem 0;
+  /* 公司动态 */
+  .company_dynamic{
+    h5{
+      font-size: 2.8rem;
+      text-align: center;
+      span{
+        color: #DB0A61;
+      }
+    }
+    p{
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+}
+/* 商品分类 */
+.goodsCategory{
+  background-color: #e41661;
+  padding: 4rem 0;
+  ul{
+    li{
+      margin-top: 1rem;
+      .goodsCategory_detail{
+        .goodsCategory_ico{
+          text-align: center;
+          i{
+            display: inline-block;
+            font-size: 2.4rem;
+            padding: 1rem;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            margin-top: .5rem;
+            color: #fff;
+          }
+        }
+        .goodsCategory_describe{
+          // text-align: center;
+          h6{
+            font-size: 1.8rem;
+          }
+          color: #fff;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+/* 联系我们 */
+.contactUs{
+  padding: 4rem 0;
+  .contactUs_title{
+    text-align: center;
+    font-size: 3.6rem;
+    color: #000;
+    margin-bottom: 4rem;
+  }
+  .contactUs_content{
+    h5{
+      font-size: 1.6rem;
+    }
+  }
+  .contactUs_map{
+    height: 33.33rem;
+    #allmap{
+      width: 100%;
+      height: 100%;
+      border: 1px solid #000;
+      .BMap_cpyCtrl{
+       display: none;
+      }
+    }
+  }
+}
+/* 关于我们 */
+.aboutMe{
+  height: 6rem;
+  background-color: #000;
+  >div{
+    height: 100%;
+    p{
+      height: 100%;
+      line-height: 6rem;
+      text-align: center;
+      color: #fff;
+      margin: 0;
+      overflow: hidden;
+    }
+  }
+}
